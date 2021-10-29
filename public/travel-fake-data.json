@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Paris",
+        "img": "https://i.ibb.co/3vDDnjb/paris.jpg",
+        "drtails": "The magnetic City of Light draws visitors from around the globe who come to see iconic attractions like the Eiffel Tower, the Louvre and the Arc de Triomphe. But what travelers really fall in love with are the citys quaint cafes, vibrant markets, trendy shopping districts and unmistakable je ne sais quoi charm. Get lost wandering along Paris cobblestone streets or grab a croissant and relax on the banks of the Seine for hours."
+    },
+    {
+        "id": 2,
+        "name": "Rome",
+        "img": "https://i.ibb.co/5k4P2ZN/rome.jpg",
+        "drtails": "When you visit the Eternal City, prepare to cross a few must-see attractions – including the Colosseum, the Trevi Fountain and the Pantheon – off of your bucket list. Additional treasures, such as St. Peters Basilica and the Sistine Chapel, can be found in nearby Vatican City. Escape the tourist crowds by taking a twilight stroll along the cobblestone streets of Trastevere, or head to Mercato Centrale Roma to sample local delicacies like gelato and pizza."
+    },
+    {
+        "id": 3,
+        "name": "Maldives",
+        "img": "https://i.ibb.co/BVwyXHz/maldivs.jpg",
+        "drtails": "It is not cheap or easy to reach, but this isolated paradise between the Arabian and Laccadive seas is the personification of a dreamy tropical vacation. In this South Asian destination, which is made up of more than 1,000 islands, thatched-roof bungalows sit above crystal-clear aquamarine waters, providing easy water access and a romantic atmosphere. Fill your days with beach trips, spa treatments and snorkeling or scuba diving excursions."
+    },
+    {
+        "id": 4,
+        "name": "Bali",
+        "img": "https://i.ibb.co/SVrzDKs/bali.jpg",
+        "drtails": "Serene temples and beautiful beaches are the biggest draws to this lush Indonesian paradise. And we do mean lush – the regions notoriously soggy wet season is best avoided by planning a visit between April and October. Break up your beach time with a visit to the village of Kintamani, home to a towering (and active) volcano, as well as a large lake. If youre craving an adrenaline rush, rent a scooter and zip around the island, or hop on one of Balis many swings to soar above rice terraces and jungles."
+    },
+    {
+        "id": 5,
+        "name": "Dubai",
+        "img": "https://i.ibb.co/YZkwhvH/dubai.jpg",
+        "drtails": "Stunning Persian Gulf views, heart-pumping activities and historical landmarks await you in Dubai. This Middle Eastern city is filled with some of the worlds most notable and unique attractions, including the Burj Khalifa, the Dubai Mall and indoor Ski Dubai. But the city still holds onto its heritage, as seen in the Bastakiya Quarter and the traditional Gold and Spice souks. When you need a break from the hustle and bustle of the city, head to a sandy shore like Jumeirah Beach, Sunset Beach or Al Mamzar Beach Park."
+    },
+    {
+        "id": 6,
+        "name": "Santorini",
+        "img": "https://i.ibb.co/V29p4g5/santorini.jpg",
+        "drtails": "Frequently touted as a top honeymoon destination, this Greek isle woos newlyweds every year with its breathtaking sunsets, pastel-hued villages and colorful beaches. Archaeological sites, such as Ancient Thira and Ancient Akrotiri, beckon to history buffs, while central Santorinis winery tours lure oenophiles. Active travelers will enjoy hiking along the rim of the caldera to witness breathtaking views of the island. For a relaxing daytrip, hop on a boat to Thirassia, then head to Amoudi Bay to watch the sun set while dining alfresco."
+    }
+]
