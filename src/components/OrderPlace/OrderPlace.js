@@ -22,7 +22,7 @@ const OrderPlace = () => {
             .then(res => res.json())
             .then(result => {
                 if (result.insertedId) {
-                    alert('Order processed Successfully');
+                    alert('Booking processed Successfully');
                     reset();
                 }
             })
