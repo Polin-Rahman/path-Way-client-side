@@ -35,6 +35,8 @@ const OrderPlace = () => {
             .then(data => setService(data));
     }, [])
 
+    const status = 'Pending';
+
     return (
         <div className="container order">
             <h2 className="text-center my-3">Confirm Your Booking for - {service.name}</h2>
@@ -60,6 +62,9 @@ const OrderPlace = () => {
                     <form className="order-form" onSubmit={handleSubmit(onSubmit)}>
                         <p className="mb-1"><small>Booking id:</small></p>
                         <input defaultValue={id} {...register("orderId")} />
+
+                        <p className="mb-1"><small>Order status:</small></p>
+                        <input defaultValue={status} {...register("status")} />
 
                         <p className="mb-1"><small>Your informations:</small></p>
                         <input defaultValue={user.displayName} {...register("name")} />
