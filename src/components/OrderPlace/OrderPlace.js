@@ -12,7 +12,7 @@ const OrderPlace = () => {
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/orders', {
+        fetch('https://glacial-temple-54782.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -29,7 +29,7 @@ const OrderPlace = () => {
     };
 
     useEffect(() => {
-        const url = `http://localhost:5000/orderplace/${id}`;
+        const url = `https://glacial-temple-54782.herokuapp.com/orderplace/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setService(data));

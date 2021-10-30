@@ -7,7 +7,7 @@ const MyOrders = () => {
     const { user } = useAuth();
 
     useEffect(() => {
-        fetch('http://localhost:5000/allorders')
+        fetch('https://glacial-temple-54782.herokuapp.com/allorders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
@@ -18,7 +18,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to cancel?');
         if (proceed) {
-            const url = `http://localhost:5000/allorders/${id}`;
+            const url = `https://glacial-temple-54782.herokuapp.com/allorders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

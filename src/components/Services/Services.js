@@ -9,7 +9,7 @@ const Services = () => {
     useEffect(() => {
         setISLoading(true);
 
-        fetch('http://localhost:5000/services')
+        fetch('https://glacial-temple-54782.herokuapp.com/services')
             .then(res => res.json())
             .then(data => {
                 setISLoading(false);

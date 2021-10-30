@@ -5,7 +5,7 @@ const AddService = () => {
 
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/addservice', {
+        fetch('https://glacial-temple-54782.herokuapp.com/addservice', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
