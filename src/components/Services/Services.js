@@ -1,29 +1,37 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import Service from '../Service/Service';
 
 const Services = () => {
     const [services, setServices] = useState([]);
-    //const [isLoading, setISLoading] = useState(false);
+    const [isLoading, setISLoading] = useState(false);
 
     useEffect(() => {
-        // setISLoading(true);
+        setISLoading(true);
 
         fetch('http://localhost:5000/services')
             .then(res => res.json())
-            .then(data => setServices(data))
+            .then(data => {
+                setISLoading(false);
+                setServices(data)
+            })
 
-        // setISLoading(false);
     }, [])
 
 
     return (
         <div className="container my-5">
             <h1 className="text-center">We are Offering</h1>
-            {/* {isLoading && <Spinner animation="border" />} */}
+            {
+                isLoading &&
+                <div className="d-flex justify-content-center">
+                    <Spinner animation="border" />
+                </div>
+            }
             <div className="row row-cols-1 row-cols-md-3 g-4 mt-3">
                 {
                     services.map(service => <Service
-                        key={service.id}
+                        key={service._id}
                         service={service}
                     ></Service>
                     )

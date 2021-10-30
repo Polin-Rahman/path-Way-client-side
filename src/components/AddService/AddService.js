@@ -32,6 +32,10 @@ const AddService = () => {
 
                         <input placeholder="Service Name" defaultValue="" {...register("name", { required: true })} />
 
+                        <p className="mb-1"><small>Price:</small></p>
+
+                        <input placeholder="Price" defaultValue="" {...register("price", { required: true })} />
+
                         <p className="mb-1"><small>Add image url:</small></p>
 
                         <input placeholder="Image URL" defaultValue="" {...register("img", { required: true })} />

@@ -15,7 +15,7 @@ const MyOrders = () => {
     const userOrders = orders.filter(order => order.email == user.email);
 
     // delete an Order
-    const handleDeleteUser = id => {
+    const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to cancel?');
         if (proceed) {
             const url = `http://localhost:5000/allorders/${id}`;
@@ -25,9 +25,9 @@ const MyOrders = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.deletedCount > 0) {
-                        alert('deleted successfully');
-                        const remainingUsers = userOrders.filter(user => user._id !== id);
-                        setOrders(remainingUsers);
+                        alert('Deleted successfully');
+                        const remaining = userOrders.filter(user => user._id !== id);
+                        setOrders(remaining);
                     }
                 });
         }
@@ -49,7 +49,7 @@ const MyOrders = () => {
                             <p className="card-text">Address: {order.address}</p>
                             <p className="card-text">Phone: {order.phone}</p>
                             <p className="card-text fw-bolder">Order Status: {order.status} </p>
-                            <button onClick={() => handleDeleteUser(order._id)}
+                            <button onClick={() => handleDelete(order._id)}
                                 className="btn btn-danger">Cancel Order</button>
                         </div>
                     </div>
