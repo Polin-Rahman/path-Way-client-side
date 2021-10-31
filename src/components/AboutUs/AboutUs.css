@@ -1,0 +1,9 @@
+.about-container{
+    overflow: hidden;
+}
+.bottom-img img{
+    height:500px;
+}
+.about-text{
+    margin-top: 40px;
+}

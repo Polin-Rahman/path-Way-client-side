@@ -1,0 +1,14 @@
+.footer-container{
+    overflow: hidden;
+}
+.link-text{
+    text-decoration: none;
+}
+.socal-icon{
+    margin-top:5px;
+}
+.socal-icon i{
+    font-size:25px;
+    margin-left: 6px;
+    margin-right: 6px;
+}

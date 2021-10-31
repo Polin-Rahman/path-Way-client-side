@@ -7,7 +7,7 @@ import img3 from '../../images/group.jpg';
 const Packages = () => {
     return (
         <div className="continer my-5">
-            <h1 className="text-center mb-5">Some exceting Packages</h1>
+            <h1 className="text-center mb-5">Some exciting Packages</h1>
 
             <CardGroup>
                 <Card>
