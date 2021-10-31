@@ -64,7 +64,9 @@ const ManageAllOrders = () => {
                             Order Id: {order.orderId}
                         </div>
                         <div className="card-body">
-                            <h5 className="card-title">Name: {order.name}</h5>
+                            <h5 className="card-title">Name: {order.userName}</h5>
+                            <p className="card-text">Booking for: <span className="fw-bolder">{order.name}</span></p>
+                            <p className="card-text">Payable amount: <span className="fw-bolder">${order.price}</span></p>
                             <p className="card-text">Email: {order.email}</p>
                             <p className="card-text">Address: {order.address}</p>
                             <p className="card-text">Phone: {order.phone}</p>

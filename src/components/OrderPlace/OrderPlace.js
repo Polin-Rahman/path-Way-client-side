@@ -8,10 +8,25 @@ const OrderPlace = () => {
     const { id } = useParams();
     const { user } = useAuth();
 
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+
     const [service, setService] = useState({});
 
-    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    useEffect(() => {
+        const url = `https://glacial-temple-54782.herokuapp.com/orderplace/${id}`;
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                setService(data);
+                reset(data)
+
+            });
+    }, [reset, id])
+
     const onSubmit = data => {
+        delete data._id;
+        //   console.log(data);
+
         fetch('https://glacial-temple-54782.herokuapp.com/orders', {
             method: 'POST',
             headers: {
@@ -28,18 +43,13 @@ const OrderPlace = () => {
             })
     };
 
-    useEffect(() => {
-        const url = `https://glacial-temple-54782.herokuapp.com/orderplace/${id}`;
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setService(data));
-    }, [])
 
     const status = 'Pending';
 
     return (
         <div className="container order">
-            <h2 className="text-center my-3">Confirm Your Booking for - {service.name}</h2>
+            <h2 className="text-center my-2">Confirm Your Booking for - {service.name}</h2>
+            <h5 className="text-center my-2">Booking cost: ${service.price}</h5>
             <div className="d-flex justify-content-center">
                 <div>
                     <div className="card mb-3" style={{ 'max-width': '900px' }}>
@@ -66,8 +76,12 @@ const OrderPlace = () => {
                         <p className="mb-1"><small>Order status:</small></p>
                         <input defaultValue={status} {...register("status")} />
 
+                        <p className="mb-1"><small>Your total Cost:</small></p>
+                        <input defaultValue={service.price} {...register("price")} />
+
+
                         <p className="mb-1"><small>Your informations:</small></p>
-                        <input defaultValue={user.displayName} {...register("name")} />
+                        <input defaultValue={user.displayName} {...register("userName")} />
                         <input defaultValue={user.email} {...register("email", { required: true })} />
                         {errors.email && <span className="error">This field is required</span>}
 
